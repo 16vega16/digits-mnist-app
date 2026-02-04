@@ -8,7 +8,7 @@ st.write("Sube una imagen de un número manuscrito (0-9) y el modelo intentará 
 
 @st.cache_resource
 def load_my_model():
-    return keras.models.load_model('modelo_mnist.h5')
+    return keras.models.load_model('modelo_mnist.keras')
 
 try:
     model = load_my_model()
