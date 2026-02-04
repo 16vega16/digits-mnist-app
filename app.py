@@ -1,5 +1,5 @@
 import streamlit as st
-import tensorflow as keras
+import tensorflow as tf
 import numpy as np
 from PIL import Image
 
@@ -8,7 +8,7 @@ st.write("Sube una imagen de un número manuscrito (0-9) y el modelo intentará 
 
 @st.cache_resource
 def load_my_model():
-    return keras.models.load_model('modelo_mnist.keras')
+    return tf.keras.models.load_model('modelo_mnist.keras')
 
 try:
     model = load_my_model()
