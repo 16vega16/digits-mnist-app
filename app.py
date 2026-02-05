@@ -5,12 +5,12 @@ from PIL import Image, ImageOps
 
 st.set_page_config(page_title="MNIST Pro", layout="centered")
 
-st.title("🖌️ Reconocimiento de Dígitos MNIST (Versión Pro)")
+st.title("🖌️ Reconocimiento de Dígitos MNIST")
 st.write("Sube tu imagen. Esta versión centra y ajusta el número automáticamente.")
 
 @st.cache_resource
 def load_my_model():
-    return tf.keras.models.load_model('modelo_mnist.keras')
+    return tf.keras.models.load_model('modelo_mnistV2.keras')
 
 try:
     model = load_my_model()
